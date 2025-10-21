@@ -1,0 +1,156 @@
+<!--
+  Copyright 2025 The SPZ HTML Authors. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS-IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the license.
+-->
+<!DOCTYPE html>
+<html ⚡ lang="en">
+<!-- prettier-ignore -->
+
+<head>
+  <meta charset="utf-8">
+  <title>spz-slide-indicator example</title>
+  <link rel="canonical" href="/examples/spz-slide-indicator.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style spz-boilerplate>
+    body {
+      -webkit-animation: -spz-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -spz-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -spz-start 8s steps(1, end) 0s 1 normal both;
+      animation: -spz-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -spz-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-moz-keyframes -spz-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-ms-keyframes -spz-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-o-keyframes -spz-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @keyframes -spz-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+  </style><noscript>
+    <style spz-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
+      }
+    </style>
+  </noscript>
+  <style spz-custom>
+
+  </style>
+  <!-- <script async custom-element="spz-slide-indicator"
+    src="http://127.0.0.1:8000/dist/spz-slide-indicator-0.1.max.js"></script> -->
+  <!-- <script async src="http://127.0.0.1:8000/dist/spz.js"></script> -->
+  <!-- <script src="../dist/spz-carousel-0.1.js" async></script> -->
+  <!-- <script src="../dist/spz-slide-indicator-0.1.js" async></script> -->
+  <!-- <script src="../dist/spz.js" async></script> -->
+  <script src="../dist/spz.js" async></script>
+
+</head>
+
+<body>
+  <div class="carousel-container">
+
+ <spz-carousel style="width: 100%;" layout="fixed-height" height="300" id="carousel" effect="swipe"
+      visible-count="2">
+      <spz-img layout="responsive" src="https://cdn.shoplazza.com/b056cecf9da835afee1d0f31c45b60d5.jpeg" width="300"
+        height="200"></spz-img>
+      <spz-img layout="responsive" src="https://cdn.shoplazza.com/b056cecf9da835afee1d0f31c45b60d5.jpeg" width="300"
+        height="200"></spz-img>
+      <spz-img layout="responsive" src="https://cdn.shoplazza.com/b056cecf9da835afee1d0f31c45b60d5.jpeg" width="300"
+        height="200"></spz-img>
+      <spz-img layout="responsive" src="https://cdn.shoplazza.com/b056cecf9da835afee1d0f31c45b60d5.jpeg" width="300"
+        height="200"></spz-img>
+      <spz-img layout="responsive" src="https://cdn.shoplazza.com/b056cecf9da835afee1d0f31c45b60d5.jpeg" width="300"
+        height="200"></spz-img>
+    </spz-carousel>
+    <spz-slide-indicator style="margin:0 auto" carousel-id="carousel" size="5" layout="container"
+      type="">
+    </spz-slide-indicator>
+  </div>
+
+</body>
+<style>
+  .carousel-container {
+    width: 300px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.245);
+    border-radius: 10px;
+    overflow: hidden;
+  
+  }
+  img{
+    width: 300px;
+    height: 300px;
+    overflow: visible !important;
+  }
+
+  /* spz-slide-indicator {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    } */
+</style>
+
+<style type="text/css">
+  #shoplaza-section-announcement .page-container {
+    min-height: 36px;
+  }
+</style>
+
+</html>
