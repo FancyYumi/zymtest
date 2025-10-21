@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pointer default test</title>
+        <style>
+            /* 横向滚动容器：固定宽度 + 横向溢出 + 子项不收缩 */
+            #container {
+                width: 300px;
+                display: flex;
+                overflow-x: auto;
+                overflow-y: hidden;
+                gap: 0;
+                -webkit-overflow-scrolling: touch; /* iOS 惯性滚动 */
+                touch-action: pan-x; /* 允许横向滚动手势，限制纵向 */
+                border: 1px solid #ccc;
+            }
+            #container > div {
+                flex: 0 0 auto; /* 防止 flex 布局把子项缩小以致无溢出 */
+                width: 200px;
+                height: 200px;
+            }
+
+            /* 纵向滚动示例 */
+            #v-container {
+                width: 300px;
+                height: 150px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                border: 1px solid #ccc;
+                margin-top: 16px;
+                -webkit-overflow-scrolling: touch;
+                touch-action: pan-y;
+            }
+            #v-container .item {
+                height: 120px;
+            }
+        </style>
+</head>
+<body>
+        <h3>横向滚动（在容器内左右滑动/滚动）</h3>
+        <div id="container">
+                <div style="background: red;"></div>
+                <div style="background: rosybrown;"></div>
+                <div style="background: yellow;"></div>
+        </div>
+
+        <h3>纵向滚动（在容器内上下滑动/滚动）</h3>
+        <div id="v-container">
+            <div class="item" style="background:#e6f7ff;"></div>
+            <div class="item" style="background:#ffd6e7;"></div>
+            <div class="item" style="background:#fff1b8;"></div>
+        </div>
+</body>
+</html>
